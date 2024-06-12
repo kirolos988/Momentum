@@ -1,9 +1,10 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 /** @format */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductList } from "../reduxToolkit/productListSlice";
+import { addProduct } from "../reduxToolkit/cartSlice";
 
 function Home() {
   const productList = useSelector((state) => state.productList);
@@ -12,6 +13,10 @@ function Home() {
     dispatch(fetchProductList());
     // eslint-disable-next-line
   }, []);
+  const handleAddToCart = (productList) => {
+    dispatch(addProduct(productList));
+  };
+
   return (
     <div>
       <p>Hello Home</p>
@@ -21,10 +26,17 @@ function Home() {
       ) : null}
       {!productList.loading && productList.productListData.length
         ? productList.productListData.map((productList) => (
-            <ul key={productList.id}>
+            <ul key={Math.random()}>
               <li>{productList.title}</li>
               <li>{productList.price}</li>
-              <img src={productList.images[0]} alt="Description of the image" style={{width: '40px', height: '50px'}}/>
+              <img
+                src={productList.images[0]}
+                alt='Description of the image'
+                style={{ width: "40px", height: "50px" }}
+              />
+              <button onClick={() => handleAddToCart(productList)}>
+                Add to cart
+              </button>
             </ul>
           ))
         : null}
