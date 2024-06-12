@@ -12,23 +12,22 @@ export const cartSlice = createSlice({
   reducers: {
     addProduct: (state, action) => {
       if (state.product.length === 0) {
+        // DO this if the cart is empty
         state.product.push(action.payload);
-        state.diffItems = state.diffItems + 1;
-        state.totalItems = state.totalItems + 1;
+        state.diffItems++;
+        state.totalItems++;
       } else {
-        let count = 0;
-        for (let i = 0; i < state.product.length; i++) {
-          if (state.product[i].id === action.payload.id) {
-            count = count + 1;
-            state.totalItems = state.totalItems + 1;
-          } else {
-            continue;
-          }
-        }
-        if (count === 0) {
+        let itemIndex = state.product.findIndex(
+          (product) => product.id === action.payload.id,
+        );
+        if (itemIndex !== -1) {
+          // Do this if the item is added before
+          state.totalItems++;
+        } else {
+          // Do this if the item is the first time to be added
           state.product.push(action.payload);
-          state.diffItems = state.diffItems + 1;
-          state.totalItems = state.totalItems + 1;
+          state.diffItems++;
+          state.totalItems++;
         }
       }
     },
