@@ -3,9 +3,9 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Home from "./components/Home";
-import Cart from "./components/Cart";
-import NoPage from "./components/NoPage";
+import Home from "./components/Home.jsx";
+import Cart from "./components/Cart.jsx";
+import NoPage from "./components/NoPage.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route index element={<Home />} />
-          <Route path='/src/components/Cart.js' element={<Cart />} />
+          <Route path='/src/components/Cart.jsx' element={<Cart />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
         <Footer />
