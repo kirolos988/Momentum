@@ -1,0 +1,20 @@
+/** @format */
+
+.header {
+  text-align: center;
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.companyName {
+  color: #285e7f;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: block;
+  }
+}

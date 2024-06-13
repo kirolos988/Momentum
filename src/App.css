@@ -1,0 +1,29 @@
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+
+  /* Media Queries for Responsive Design */
+  /* @media (max-width: 768px) {
+    .header, .footer {
+      text-align: center;
+    }
+  
+    .content {
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header, .footer {
+      padding: 0.5rem;
+    }
+  
+    .content {
+      padding: 0.5rem;
+    }
+  } */
+  

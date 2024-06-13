@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   return (
-    <div>
+    <div style={{flex: 1}}>
       <p>Hello from cart</p>
       <p>different Items: {cart.diffItems}</p>
       <p>Total Items: {cart.totalItems}</p>

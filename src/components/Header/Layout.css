@@ -1,0 +1,22 @@
+.navLinks{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #999;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 1s ease;
+}
+.link:hover {
+  color: #ddd;
+}
+
+.active {
+  color: #555;
+}
