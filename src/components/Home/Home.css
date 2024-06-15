@@ -1,0 +1,60 @@
+/** @format */
+
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  flex: 1;
+}
+
+.productCard {
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.addToCartBtn {
+  background-color: white;
+  border: 1px #999 solid;
+  border-radius: 15px;
+  margin: 0px 10px 10px 10px;
+  width: calc(100% - 60px);
+  height: 30px;
+}
+
+.addToCartBtn :hover {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.addToCartText {
+  margin: 0;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  flex: 1;
+  text-align: center;
+  align-content: center;
+}
+
+.loading {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    flex: 1 1 calc(100% - 40px);
+  }
+}
