@@ -15,7 +15,7 @@ const Layout = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "link active" : "link")}
-          to='/src/components/Cart.jsx'
+          to='/src/components/Cart/Cart.jsx'
         >
           Cart
         </NavLink>

@@ -16,9 +16,9 @@ function App() {
         <Header />
         <Routes>
           <Route index element={<Home />} />
-          <Route path='/src/components/Cart.jsx' element={<Cart />} />
+          <Route path='/src/components/Cart/Cart.jsx' element={<Cart />} />
           <Route
-            path='/src/components/ProductDetails.jsx'
+            path='/src/components/ProductDetails/ProductDetails.jsx'
             element={<ProductDetails />}
           />
           <Route path='*' element={<NoPage />} />

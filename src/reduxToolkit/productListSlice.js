@@ -16,15 +16,9 @@ export const producListSlice = createSlice({
   name: "productList",
   initialState: {
     productListData: [],
-    // filteredCategory: [],
     loading: false,
     error: "",
   },
-  // reducers: {
-  //   addTofilteredCategory: (state, action ) => {
-  //     state.filteredCategory.push(action.payload);
-  //   }
-  // },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProductList.pending, (state) => {
@@ -42,5 +36,4 @@ export const producListSlice = createSlice({
       });
   },
 });
-// export const {addTofilteredCategory} = producListSlice.actions
 export default producListSlice.reducer;
