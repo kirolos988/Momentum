@@ -1,3 +1,17 @@
+To run the Project:
+1- git clone https://github.com/kirolos988/Momentum
+2- npm install
+3- npm run start
+
+Used Libraries and Technologies:
+1- Async Storage to keep total item in the cart while navigating between screens
+2- redux toolkit for state management
+3- CSS for styling
+4- Media Query for responsive design
+5- React router for navigation
+6- Axios for fetching API
+7- API Link ( https://fakestoreapi.com/products )
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

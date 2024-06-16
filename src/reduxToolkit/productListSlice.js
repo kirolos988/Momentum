@@ -7,8 +7,8 @@ export const fetchProductList = createAsyncThunk(
   "productList/fetchProductList",
   () => {
     return axios
-      .get("https://dummyjson.com/products")
-      .then((response) => response.data.products);
+      .get("https://fakestoreapi.com/products")
+      .then((response) => response.data);
   },
 );
 
@@ -36,5 +36,4 @@ export const producListSlice = createSlice({
       });
   },
 });
-
 export default producListSlice.reducer;

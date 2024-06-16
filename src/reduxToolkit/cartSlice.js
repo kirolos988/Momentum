@@ -9,6 +9,7 @@ export const cartSlice = createSlice({
     diffItems: 0,
     totalItems: 0,
   },
+
   reducers: {
     addProduct: (state, action) => {
       if (state.product.length === 0) {
@@ -31,8 +32,13 @@ export const cartSlice = createSlice({
         }
       }
     },
+    removeAll: (state) => {
+      state.product = [];
+      state.diffItems = 0;
+      state.totalItems = 0;
+    },
   },
 });
 
-export const { addProduct } = cartSlice.actions;
+export const { addProduct, removeAll } = cartSlice.actions;
 export default cartSlice.reducer;

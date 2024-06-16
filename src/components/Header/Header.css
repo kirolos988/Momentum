@@ -4,6 +4,7 @@
   text-align: center;
   display: flex;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .companyName {
@@ -23,6 +24,15 @@
   color: #555;
   justify-content: center;
   margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: block;
+  }
+  .totalItems {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 480px) {
