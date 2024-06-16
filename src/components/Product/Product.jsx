@@ -17,7 +17,7 @@ const Product = (props) => {
   };
 
   const handleProductDetails = (product) => {
-    navigate("/product-details", {
+    navigate("/Momentum/product-details", {
       state: { product },
     });
   };
@@ -25,7 +25,6 @@ const Product = (props) => {
   return (
     <div className='productCard'>
       <a
-        href='/product-details'
         className='productDetails'
         onClick={() => handleProductDetails(product)}
       >

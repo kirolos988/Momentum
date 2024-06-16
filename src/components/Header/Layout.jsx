@@ -9,13 +9,13 @@ const Layout = () => {
       <nav className='navLinks'>
         <NavLink
           className={({ isActive }) => (isActive ? "link active" : "link")}
-          to='/'
+          to='/Momentum'
         >
           Home
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "link active" : "link")}
-          to='/cart'
+          to='/Momentum/cart'
         >
           Cart
         </NavLink>

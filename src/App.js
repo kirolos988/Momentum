@@ -15,9 +15,9 @@ function App() {
       <div className='App'>
         <Header />
         <Routes>
-          <Route index path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/product-details' element={<ProductDetails />} />
+          <Route path='/Momentum' element={<Home />} />
+          <Route path='/Momentum/cart' element={<Cart />} />
+          <Route path='/Momentum/product-details' element={<ProductDetails />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
         <Footer />

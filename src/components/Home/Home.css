@@ -27,9 +27,7 @@
 
 .addToCartBtn :hover {
   cursor: pointer;
-  transition: 0.5s;
   opacity: 0.6;
-  font-size: 18px;
 }
 
 .addToCartText {
