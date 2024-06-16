@@ -7,20 +7,33 @@ import { fetchProductList } from "../../reduxToolkit/productListSlice";
 import "./Home.css";
 import ProductList from "./ProductList";
 import Filter from "./Filter/Filter";
+import Sort from "./Sort/Sort";
 
 function Home() {
   const productList = useSelector((state) => state.productList);
   const [filteredCategory, setFilteredCategory] = useState();
+  const [sortedList, setSortedList] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProductList());
     // eslint-disable-next-line
   }, []);
+
   return (
     <div style={{ flex: 1 }}>
       <Filter
         productList={productList.productListData}
         setFilteredCategory={setFilteredCategory}
+        setSortedList={setSortedList}
+      />
+      <Sort
+        products={
+          filteredCategory?.length > 0
+            ? filteredCategory
+            : productList.productListData
+        }
+        setSortedList={setSortedList}
+        filteredCategory={filteredCategory}
       />
 
       <div className='homeContainer'>
@@ -32,7 +45,9 @@ function Home() {
         {!productList?.loading && productList.productListData?.length ? (
           <ProductList
             products={
-              filteredCategory?.length > 0
+              sortedList?.length > 0
+                ? sortedList
+                : filteredCategory?.length > 0
                 ? filteredCategory
                 : productList.productListData
             }

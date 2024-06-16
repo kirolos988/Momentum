@@ -13,6 +13,7 @@ const Filter = (props) => {
   ];
   const { productList, setFilteredCategory } = props;
   const [selectedOption, setSelectedOption] = useState("all");
+
   const handleOptionChange = (e) => {
     const selectedCat = e.target.value;
     const filteredData = productList.filter((product) => {
@@ -37,7 +38,7 @@ const Filter = (props) => {
               checked={selectedOption === cat.value}
               onChange={handleOptionChange}
             />
-            <p className="checkmark">{cat.name}</p>
+            <p className='checkmark'>{cat.name}</p>
           </label>
         </div>
       ))}
