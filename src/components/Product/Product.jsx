@@ -17,7 +17,7 @@ const Product = (props) => {
   };
 
   const handleProductDetails = (product) => {
-    navigate("/src/components/ProductDetails/ProductDetails.jsx", {
+    navigate("/product-details", {
       state: { product },
     });
   };
@@ -25,7 +25,7 @@ const Product = (props) => {
   return (
     <div className='productCard'>
       <a
-        href='/src/components/ProductDetails/ProductDetails.jsx'
+        href='/product-details'
         className='productDetails'
         onClick={() => handleProductDetails(product)}
       >

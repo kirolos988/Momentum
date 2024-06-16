@@ -15,12 +15,9 @@ function App() {
       <div className='App'>
         <Header />
         <Routes>
-          <Route index element={<Home />} />
-          <Route path='/src/components/Cart/Cart.jsx' element={<Cart />} />
-          <Route
-            path='/src/components/ProductDetails/ProductDetails.jsx'
-            element={<ProductDetails />}
-          />
+          <Route index path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/product-details' element={<ProductDetails />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
         <Footer />
