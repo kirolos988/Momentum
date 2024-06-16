@@ -6,10 +6,10 @@ import "./Filter.css";
 const Filter = (props) => {
   const categories = [
     { id: "all", name: "All", value: "all" },
-    { id: "beauty", name: "Beauty", value: "beauty" },
-    { id: "fragrances", name: "Fragrances", value: "fragrances" },
-    { id: "furniture", name: "Furniture", value: "furniture" },
-    { id: "groceries", name: "Groceries", value: "groceries" },
+    { id: "men's clothing", name: "Men's Clothing", value: "men's clothing" },
+    { id: "jewelery", name: "Jewelery", value: "jewelery" },
+    { id: "electronics", name: "Electronics", value: "electronics" },
+    { id: "women's clothing", name: "Women Clothing", value: "women's clothing" },
   ];
   const { productList, setFilteredCategory } = props;
   const [selectedOption, setSelectedOption] = useState("all");

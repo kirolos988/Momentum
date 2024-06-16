@@ -26,6 +26,10 @@
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .addToCartBtn {
@@ -52,6 +56,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    flex: 1 1 calc(100% - 40px);
+  }
 }
 
 @media (max-width: 480px) {

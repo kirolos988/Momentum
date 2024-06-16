@@ -10,7 +10,7 @@ Used Libraries and Technologies:
 4- Media Query for responsive design
 5- React router for navigation
 6- Axios for fetching API
-7- API Link ( https://dummyjson.com/products )
+7- API Link ( https://fakestoreapi.com/products )
 
 # Getting Started with Create React App
 

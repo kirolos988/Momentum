@@ -44,20 +44,20 @@
 
 @media (max-width: 768px) {
   .list {
-    font-size: 14px;
+    font-size: 12px;
   }
   .sortBy {
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .list {
-    font-size: 12px;
+    font-size: 10px;
   }
   .sortBy {
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 5px;
   }
 }

@@ -18,7 +18,7 @@ const ProductDetails = () => {
     <div className='productContainer'>
       <div className='imageContainer'>
         <img
-          src={product.images[0]}
+          src={product.image}
           alt='Description of the image'
           className='image'
         />

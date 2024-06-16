@@ -30,7 +30,7 @@ const Product = (props) => {
         onClick={() => handleProductDetails(product)}
       >
         <img
-          src={product.images[0]}
+          src={product.image}
           alt='Description of the image'
           className='productImg'
         />
